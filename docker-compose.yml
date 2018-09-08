@@ -1,0 +1,13 @@
+version: '2'
+volumes:
+  dropshipping-mysql-data:
+    driver: local
+
+services:
+  app:
+    image: ambientum/php:7.1-caddy
+    container_name: dropshipping-app
+    volumes:
+    - .:/var/www/app
+    ports:
+    - "80:8080"
